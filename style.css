@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-image: linear-gradient(65deg, #000, #aaa, #fff);
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+section {
+    width: 300px;
+}
+
+section>#previous {
+    margin: 0 0 0 25%;
+}
+
+button {
+    padding: 10px;
+    margin: 2vh 0;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 2vh;
+}
+
+#carrossel {
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#carrossel-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+#carrossel>#carrossel-content>img {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+section>input:nth-child(2):checked~#carrossel>#carrossel-content {
+    transform: translateX(0%);
+}
+
+section>input:nth-child(3):checked~#carrossel>#carrossel-content {
+    transform: translateX(-100%);
+}
+
+section>input:nth-child(4):checked~#carrossel>#carrossel-content {
+    transform: translateX(-200%);
+}
+
+section>input:nth-child(5):checked~#carrossel>#carrossel-content {
+    transform: translateX(-300%);
+}
+
+section>input:nth-child(6):checked~#carrossel>#carrossel-content {
+    transform: translateX(-400%);
+}
